@@ -5,6 +5,8 @@
 Welcome to my assignment for the Backend Developer Internship. I have built an API using Node.js and Express. I have used two databases (PostgreSQL for the users table and MongoDB for the tasks) to show I know how to work with both. It also has a basic login system and catches bad inputs.
 
 ---
+### Demo Video
+<a href="https://youtu.be/xJAk4De2lYU" target="_blank"><img src="https://img.youtube.com/vi/xJAk4De2lYU/maxresdefault.jpg" alt="Demo Video" width="560" /></a>
 
 ##  Setup and Installation
 
