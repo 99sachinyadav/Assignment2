@@ -12,29 +12,29 @@ setServers(["1.1.1.1", "8.8.8.8"]);// for resolving the Ip conflict with mongodb
 
 const app = express();
 dotenv.config();
-// Basic middleware setup
-app.use(cors()); // Allow cross-origin requests
-app.use(express.json()); // Parse JSON request body
-// app.use(express.urlencoded({ extended: false })); // Parse URL-encoded bodies
+ 
+app.use(cors()); 
+app.use(express.json());  
+ 
 
-// Mount Routes
+ 
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
-// Basic health-check route
+ 
 app.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the Task Management API!' });
+  res.json({ message: 'Welcome to the Task Management server' });
 });
 
-// 404 Route Handler - catches all routes not defined above
+ 
 app.use(notFound);
 
-// Always place global error handling middleware last
+ 
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-// Connect to Databases and then start server
+ 
 const startServer = async () => {
   try {
     // 1. Connect to MongoDB
